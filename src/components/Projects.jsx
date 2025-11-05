@@ -18,15 +18,15 @@ const Projects = () => {
     },
     {
       title: "Progression Product",
-      subtitle: "Django REST backend for Builder.io frontend",
-      tags: ["Backend Architecture", "APIs", "Product Delivery"],
+      subtitle: "Django REST backend & Builder.io frontend",
+      tags: ["Backend Architecture", "APIs", "Product Delivery", "AI"],
       description: "Robust backend architecture powering dynamic frontend experiences.",
       color: "from-teal to-sage"
     },
     {
       title: "Catalyst",
       subtitle: "React + Vite web app",
-      tags: ["Performance", "Modular Design"],
+      tags: ["Performance", "Modular Design", "Animation"],
       description: "High-performance web application with modular architecture.",
       color: "from-lilac to-lavender"
     }
@@ -37,7 +37,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 text-center">Featured Projects</h2>
         <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          A collection of products where engineering meets thoughtful design
+          A collection of products where engineering meets impactful design
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">

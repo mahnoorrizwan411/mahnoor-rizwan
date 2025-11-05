@@ -44,11 +44,11 @@ const Skills = () => {
         </div>
 
         {/* Quote */}
-        <div className="max-w-3xl mx-auto text-center">
+        {/* <div className="max-w-3xl mx-auto text-center">
           <p className="text-2xl md:text-3xl text-gray-700 italic font-light leading-relaxed">
             "I believe good engineering is a mix of <span className="font-semibold text-gray-800">clarity</span>, <span className="font-semibold text-gray-800">curiosity</span>, and <span className="font-semibold text-gray-800">care</span>."
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   )

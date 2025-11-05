@@ -15,19 +15,26 @@ const Hero = () => {
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-blush rounded-full opacity-20 blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
       <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-sage rounded-full opacity-15 blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      {/* SVG in the middle */}
+      <div className="relative z-10 flex items-center justify-center h-[33.333vh]">
+        <img 
+          src="/mahnoor-square-kufic.svg" 
+          alt="Mahnoor Rizwan - Kufic Art" 
+          className="w-full h-full max-w-2xl object-contain"
+        />
+      </div>
+
+      {/* Content - Commented out */}
+      {/* <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800">
-          Building Purposeful Products
+          Mahnoor Rizwan
         </h1>
         <p className="text-2xl md:text-3xl text-gray-700 mb-4 font-light">
-          where code meets empathy
+        Creating Impact - where code meets empathy
         </p>
         <p className="text-lg md:text-xl text-gray-600 mb-12 mt-8 max-w-6xl mx-auto">
-          Full-Stack Product Engineer | Electrical Engineer by training | Mother driven by curiosity and creation
+          Full-Stack Product Engineer | Mother driven by curiosity and creation
         </p>
-        
-        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={scrollToProjects}
@@ -44,7 +51,7 @@ const Hero = () => {
             Connect on LinkedIn
           </a>
         </div>
-      </div>
+      </div> */}
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

@@ -15,7 +15,7 @@ const About = () => {
               With roots in electrical engineering and hands-on experience across React, Django, and Flutter, I bridge design, development, and product strategy to deliver clean, performant, and delightful experiences.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed italic text-gray-600">
-              When I'm not engineering products, I'm exploring motherhood's creative energy — it's my greatest design challenge yet.
+              When I'm not engineering products, I'm exploring motherhood — it's my greatest challenge yet.
             </p>
             <a
               href="/Mahnoor Rizwan CV.pdf"
