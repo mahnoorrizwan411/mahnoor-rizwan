@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Projects = () => {
   const projects = [
@@ -7,28 +8,32 @@ const Projects = () => {
       subtitle: "Minimalist Meditation Timer App",
       tags: ["Flutter", "Animation", "UX Optimization"],
       description: "A beautifully crafted meditation timer with intuitive animations and user-focused design.",
-      color: "from-peach to-blush"
+      color: "from-peach to-blush",
+      caseStudyUrl: "/case-study/while"
     },
     {
       title: "Cherrish",
       subtitle: "Audio-first matchmaking app",
       tags: ["Flutter", "Firebase", "User Experience"],
       description: "Revolutionizing connections through audio-first interactions.",
-      color: "from-lavender to-lilac"
+      color: "from-lavender to-lilac",
+      caseStudyUrl: "/case-study/cherrish"
     },
     {
       title: "Progression Product",
       subtitle: "Django REST backend & Builder.io frontend",
       tags: ["Backend Architecture", "APIs", "Product Delivery", "AI"],
       description: "Robust backend architecture powering dynamic frontend experiences.",
-      color: "from-teal to-sage"
+      color: "from-teal to-sage",
+      caseStudyUrl: "/case-study/progression-product"
     },
     {
       title: "Catalyst",
       subtitle: "React + Vite web app",
       tags: ["Performance", "Modular Design", "Animation"],
       description: "High-performance web application with modular architecture.",
-      color: "from-lilac to-lavender"
+      color: "from-blue-300 to-sky-200",
+      caseStudyUrl: "/case-study/catalyst"
     }
   ]
 
@@ -68,12 +73,24 @@ const Projects = () => {
                 </div>
 
                 {/* CTA */}
-                <button className="text-gray-800 font-medium hover:text-gray-600 transition-colors duration-300 flex items-center gap-2">
-                  View Case Study
-                  <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </button>
+                {project.caseStudyUrl ? (
+                  <Link 
+                    to={project.caseStudyUrl}
+                    className="text-gray-800 font-medium hover:text-gray-600 transition-colors duration-300 flex items-center gap-2"
+                  >
+                    View Case Study
+                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                ) : (
+                  <button className="text-gray-800 font-medium hover:text-gray-600 transition-colors duration-300 flex items-center gap-2">
+                    View Case Study
+                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </button>
+                )}
               </div>
 
               {/* Hover Effect Overlay */}
