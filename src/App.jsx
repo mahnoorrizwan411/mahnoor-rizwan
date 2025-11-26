@@ -6,10 +6,10 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
-import CherrishCaseStudy from './components/case-studies/CherrishCaseStudy'
-import CatalystCaseStudy from './components/case-studies/CatalystCaseStudy'
+// import CherrishCaseStudy from './components/case-studies/CherrishCaseStudy'
+// import CatalystCaseStudy from './components/case-studies/CatalystCaseStudy'
 import WhileCaseStudy from './components/case-studies/WhileCaseStudy'
-import ProgressionProductCaseStudy from './components/case-studies/ProgressionProductCaseStudy'
+// import ProgressionProductCaseStudy from './components/case-studies/ProgressionProductCaseStudy'
 
 function Home() {
   return (
