@@ -13,8 +13,11 @@ export default {
         sage: '#A8C8A0',
         lilac: '#D4C5F9',
         blush: '#F5D0C8',
-        blue: '#3B82F6',
-        sky: '#60A5FA',
+        // blue: '#3B82F6',
+        // sky: '#60A5FA',
+        blue: '#3b75f5',
+        blueLight: '#2563EB',
+        sky: '#9dcef2',
       },
       fontFamily: {
         sans: ['Inter', 'Poppins', 'Sora', 'system-ui', 'sans-serif'],

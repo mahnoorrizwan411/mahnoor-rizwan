@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const screenshotImages = [
@@ -65,6 +65,9 @@ const galleryScreens = [
 const whileVideoSrc = '/assets/While/While.mp4'
 
 const WhileCaseStudy = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [])
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}

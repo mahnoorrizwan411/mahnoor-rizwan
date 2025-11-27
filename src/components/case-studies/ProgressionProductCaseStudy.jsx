@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const ProgressionProductCaseStudy = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [])
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
