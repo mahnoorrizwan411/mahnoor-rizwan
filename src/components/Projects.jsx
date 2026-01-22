@@ -12,38 +12,39 @@ const Projects = () => {
       caseStudyUrl: "/case-study/while"
     },
     {
-      title: "Cherrish",
-      subtitle: "Audio-first matchmaking app",
-      tags: ["Flutter", "Firebase", "User Experience"],
-      description: "Revolutionizing connections through audio-first interactions.",
-      color: "from-lavender to-lilac",
-      caseStudyUrl: "/case-study/cherrish"
-    },
-    {
-      title: "Progression Product",
-      subtitle: "Django REST backend & Builder.io frontend",
-      tags: ["Backend Architecture", "APIs", "Product Delivery", "AI"],
-      description: "Robust backend architecture powering dynamic frontend experiences.",
-      color: "from-teal to-sage",
-      caseStudyUrl: "/case-study/progression-product"
-    },
-    {
       title: "Catalyst",
       subtitle: "React + Vite web app",
       tags: ["Performance", "Modular Design", "Animation"],
       description: "High-performance web application with modular architecture.",
       color: "from-blue to-sky",
       caseStudyUrl: "/case-study/catalyst"
-    }
+    },
+    // {
+    //   title: "Cherrish",
+    //   subtitle: "Audio-first matchmaking app",
+    //   tags: ["Flutter", "Firebase", "User Experience"],
+    //   description: "Revolutionizing connections through audio-first interactions.",
+    //   color: "from-lavender to-lilac",
+    //   caseStudyUrl: "/case-study/cherrish"
+    // },
+    // {
+    //   title: "Progression Product",
+    //   subtitle: "Django REST backend & Builder.io frontend",
+    //   tags: ["Backend Architecture", "APIs", "Product Delivery", "AI"],
+    //   description: "Robust backend architecture powering dynamic frontend experiences.",
+    //   color: "from-teal to-sage",
+    //   caseStudyUrl: "/case-study/progression-product"
+    // }
+    
   ]
 
   return (
     <section id="projects" className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 text-center">Featured Projects</h2>
-        <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        {/* <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           A collection of products where engineering meets impactful design
-        </p>
+        </p> */}
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
