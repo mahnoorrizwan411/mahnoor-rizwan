@@ -4,19 +4,19 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Languages",
-      skills: ["JavaScript", "Python", "Dart"]
+      skills: ["JavaScript", "Python", "Dart", "HTML", "CSS"]
     },
     {
       title: "Frameworks",
-      skills: ["React", "Django", "Flutter"]
+      skills: ["React", "Django", "Flutter", "Vite", "Tailwind CSS"]
     },
     {
       title: "Concepts",
-      skills: ["REST APIs", "Responsive Design", "State Management"]
+      skills: ["REST APIs", "Responsive Design", "State Management", "Animation", "UI/UX Design",]
     },
     {
       title: "Tools",
-      skills: ["Figma", "Builder.io", "Cursor", "GitHub Copilot", "ChatGPT"]
+      skills: ["Figma", "Builder.io", "Cursor", "GitHub", "ChatGPT"]
     }
   ]
 
