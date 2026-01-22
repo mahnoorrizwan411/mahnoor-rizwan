@@ -97,13 +97,13 @@ const WhileCaseStudy = () => {
               </div>
               <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-600 mb-6">
                 <div>
-                  <span className="font-semibold">Role:</span> Flutter Engineer • Product Designer
+                  <span className="font-semibold">Role:</span> Flutter Engineer
                 </div>
                 <div>
                   <span className="font-semibold">Timeline:</span> 2024
                 </div>
                 <div>
-                  <span className="font-semibold">Platforms:</span> iOS / Android
+                  <span className="font-semibold">Platforms:</span> iOS
                 </div>
                 <div>
                   <span className="font-semibold">Stack:</span> Flutter, Dart, Hive, BLoC, RevenueCat, Mixpanel, Polar SDK
@@ -153,9 +153,9 @@ const WhileCaseStudy = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Overview</h2>
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            While is a minimal, animation-driven meditation timer emphasizing visual calm and simplicity. Its circular timer interface reacts to scrolling, enabling users to intuitively select durations. With polar heart-rate integration, session history, interval chimes, and theme personalization, While delivers an immersive, distraction-free meditation experience.
+            While is a minimal, animation-driven meditation timer emphasizing visual calm and simplicity. Its circular timer interface reacts to scrolling, enabling users to intuitively select durations. With polar heart-rate integration, session history & calendar, interval chimes, and theme personalization, While delivers a distraction-free meditation experience.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gray-50 rounded-lg p-6">
               <div className="text-sm text-gray-600 mb-2">Platform</div>
               <div className="text-lg font-semibold text-gray-800">Mobile</div>
@@ -184,7 +184,7 @@ const WhileCaseStudy = () => {
               <div className="text-sm text-gray-600 mb-2">Integrations</div>
               <div className="text-lg font-semibold text-gray-800">Polar SDK</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -195,11 +195,10 @@ const WhileCaseStudy = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Scroll based timer", desc: "Intuitive scroll interaction" },
-              { title: "Advanced custom animations", desc: "Smooth transitions" },
-              { title: "Deep theme customization", desc: "Time-aware themes" },
+              { title: "Advanced animations", desc: "Smooth transitions" },
+              { title: "Theme customization", desc: "Time-aware themes" },
               { title: "Polar heart-rate integration", desc: "Heart-rate + accelerometer" },
-              { title: "Session history calendar", desc: "Track your progress" },
-              { title: "Premium model", desc: "RevenueCat subscriptions" }
+              { title: "Session history & calendar", desc: "Track your progress" }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="text-lg font-semibold text-gray-800 mb-2">{feature.title}</div>
@@ -211,7 +210,7 @@ const WhileCaseStudy = () => {
       </section>
 
       {/* SECTION 4 — Architecture Overview */}
-      <section className="py-16 px-6 bg-white">
+      {/* <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Architecture Overview</h2>
           <div className="grid md:grid-cols-2 gap-12">
@@ -268,10 +267,10 @@ const WhileCaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 5 — Technical Highlights */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Technical Highlights</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -355,7 +354,7 @@ const WhileCaseStudy = () => {
       </section>
 
       {/* SECTION 6 — Feature Deep Dive */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Feature Deep Dive</h2>
           <div className="grid md:grid-cols-[1fr_320px] gap-12 items-stretch">
@@ -430,7 +429,7 @@ const WhileCaseStudy = () => {
       </section>
 
       {/* SECTION 7 — Key Challenges & Solutions */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Key Challenges & Solutions</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -470,10 +469,10 @@ const WhileCaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 8 — UX Highlights */}
-      <section className="py-16 px-6 bg-white">
+      {/* <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">UX Highlights</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -510,10 +509,10 @@ const WhileCaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 9 — Business Value */}
-      <section className="py-16 px-6 bg-gradient-to-br from-peach to-blush">
+      {/* <section className="py-16 px-6 bg-gradient-to-br from-peach to-blush">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Business Value</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -535,10 +534,10 @@ const WhileCaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 10 — Reflection / Conclusion */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gradient-to-br from-peach to-blush">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Reflection</h2>
           <div className="bg-gray-50 rounded-2xl p-12">

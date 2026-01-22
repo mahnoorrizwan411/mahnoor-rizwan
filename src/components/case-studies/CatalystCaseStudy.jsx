@@ -59,7 +59,7 @@ const CatalystCaseStudy = () => {
                   <span className="font-semibold">Platform:</span> Web
                 </div>
               </div>
-              <div className="flex gap-4">
+              {/* <div className="flex gap-4">
                 <a
                   href="#"
                   target="_blank"
@@ -76,7 +76,7 @@ const CatalystCaseStudy = () => {
                 >
                   View Repo
                 </a>
-              </div>
+              </div> */}
             </div>
             <div className="bg-black rounded-2xl p-0 h-[560px] flex flex-col border border-white/10">
               <div className="relative flex-1 overflow-hidden rounded-2xl bg-gradient-to-b from-slate-900 via-slate-950 to-black">
@@ -114,7 +114,7 @@ const CatalystCaseStudy = () => {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Dual user track funnel", desc: "Builder + Operator" },
+              // { title: "Dual user track funnel", desc: "Builder + Operator" },
               { title: "Modular, scalable structure", desc: "Component architecture" },
               { title: "Scroll-triggered animations", desc: "IntersectionObserver" },
               { title: "Lottie Hero animation", desc: "Engaging visual experience" },
@@ -224,7 +224,7 @@ const CatalystCaseStudy = () => {
       </section>
 
       {/* SECTION 7 — Key Challenges & Solutions */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Key Challenges & Solutions</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -256,15 +256,10 @@ const CatalystCaseStudy = () => {
               <p className="text-gray-700">Dedicated Cloudflare functions + mapped tagging</p>
             </div>
 
-            {/* <div className="bg-white rounded-lg p-8 shadow-md md:col-span-2">
-              <div className="text-red-600 font-semibold mb-2">Challenge</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Email automation</h3>
-              <div className="text-teal-600 font-semibold mb-2 mt-6">Solution</div>
-              <p className="text-gray-700">Mailgun transactional pipeline</p>
-            </div> */}
+            
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* SECTION 8 — UX Highlights */}
@@ -276,9 +271,7 @@ const CatalystCaseStudy = () => {
               "Purposeful scroll narrative",
               "Polished Lottie Hero",
               "Responsive Tailwind layout",
-              "Clear dual-track CTA",
               "Accessible forms + messaging",
-              "Smooth state transitions"
             ].map((highlight, index) => (
               <div
                 key={index}
@@ -297,7 +290,7 @@ const CatalystCaseStudy = () => {
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Reflection</h2>
           <div className="bg-gray-50 rounded-2xl p-12">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Working on the Catalyst landing experience pushed me outside my comfort zone. I had never built something like this before, and honestly, React and web felt completely new to me — but I took it as a challenge and made it work. I actively used AI throughout the process, which helped me move faster, understand patterns, and write cleaner code, especially for complex animations and layout structures.
+            Working on the Catalyst landing experience pushed me outside my comfort zone. I had never built something on web and in React, and honestly, it felt completely new to me — but I took it as a challenge and made it work. I actively used AI tools throughout the process, which helped me move faster, understand patterns, and write cleaner code, especially for complex animations and layout structures.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
             This project really changed my perspective. It made me realize that in today’s era, languages and frameworks are just tools — what truly matters are strong fundamentals in mobile and web concepts.
