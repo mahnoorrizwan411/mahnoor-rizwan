@@ -6,6 +6,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import Blog from './components/Blog'
 import CherrishCaseStudy from './components/case-studies/CherrishCaseStudy'
 import CatalystCaseStudy from './components/case-studies/CatalystCaseStudy'
 import WhileCaseStudy from './components/case-studies/WhileCaseStudy'
@@ -33,6 +34,7 @@ function App() {
         <Route path="/case-study/catalyst" element={<CatalystCaseStudy />} />
         <Route path="/case-study/while" element={<WhileCaseStudy />} />
         <Route path="/case-study/progression-product" element={<ProgressionProductCaseStudy />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </Router>
   )

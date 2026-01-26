@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navigation = () => {
   const scrollToSection = (id) => {
@@ -19,24 +20,26 @@ const Navigation = () => {
 
           {/* Right side - Navigation items */}
           <div className="flex items-center gap-6">
-            <button
+            <Link
+              to="/"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="text-gray-800 hover:text-gray-600 font-medium transition-colors duration-300"
             >
               Home
-            </button>
+            </Link>
             <button
               onClick={() => scrollToSection('about')}
               className="text-gray-800 hover:text-gray-600 font-medium transition-colors duration-300"
             >
               About
             </button>
-            <a
-              href="#"
+            {/* Blog is currently disabled */}
+            {/* <Link
+              to="/blog"
               className="text-gray-800 hover:text-gray-600 font-medium transition-colors duration-300"
             >
               Blog
-            </a>
+            </Link> */}
             <button
               onClick={() => scrollToSection('contact')}
               className="text-gray-800 hover:text-gray-600 font-medium transition-colors duration-300"
