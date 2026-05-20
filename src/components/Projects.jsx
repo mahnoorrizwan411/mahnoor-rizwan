@@ -28,7 +28,7 @@ const Projects = () => {
     //   caseStudyUrl: "/case-study/cherrish"
     // },
     // {
-    //   title: "Progression Product",
+    //   title: "Evolve",
     //   subtitle: "Django REST backend & Builder.io frontend",
     //   tags: ["Backend Architecture", "APIs", "Product Delivery", "AI"],
     //   description: "Robust backend architecture powering dynamic frontend experiences.",

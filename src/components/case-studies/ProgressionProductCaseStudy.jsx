@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+const uxScreenshots = [
+  '/assets/progression-product/ux-screenshots/Screenshot_2026-01-27_at_1.33.29_PM-af6c30e7-0263-4409-8928-9b797db85895.png',
+  '/assets/progression-product/ux-screenshots/Screenshot_2026-01-27_at_1.33.48_PM-67e45b95-9bf4-4274-96dc-ba018e2780bb.png'
+]
+
 const ProgressionProductCaseStudy = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
@@ -49,13 +54,13 @@ const ProgressionProductCaseStudy = () => {
                   <span className="font-semibold">Frontend:</span> Next.js 15 (App Router), Redux Toolkit, Tailwind
                 </div>
                 <div>
-                  <span className="font-semibold">Backend:</span> Django 5 / DRF
+                  <span className="font-semibold">Backend:</span> Django DRF
                 </div>
                 <div>
                   <span className="font-semibold">DB:</span> PostgreSQL
                 </div>
               </div>
-              <div className="flex gap-4">
+              {/* <div className="flex gap-4">
                 <a
                   href="#"
                   target="_blank"
@@ -72,7 +77,7 @@ const ProgressionProductCaseStudy = () => {
                 >
                   View Repo(s) ↗
                 </a>
-              </div>
+              </div> */}
             </div>
             <div className="space-y-4">
               <div className="bg-gray-100 rounded-2xl p-8 h-48 flex items-center justify-center">
@@ -99,36 +104,25 @@ const ProgressionProductCaseStudy = () => {
             Evolve centralizes performance evaluations with componentized scoring, custom form building, and 360° feedback. Admins model teams, assign components with weights and recurrences, and track completion in real time. Users authenticate via email OTP, complete assigned forms, and receive transparent scoring.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="text-sm text-gray-600 mb-2">Platform</div>
-              <div className="text-lg font-semibold text-gray-800">Web (Next.js + Django)</div>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="text-sm text-gray-600 mb-2">Auth</div>
-              <div className="text-lg font-semibold text-gray-800">OTP Email + DRF Token</div>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="text-sm text-gray-600 mb-2">Architecture</div>
-              <div className="text-lg font-semibold text-gray-800">App Router + Redux + Service Layer / DRF ViewSets</div>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="text-sm text-gray-600 mb-2">Data</div>
-              <div className="text-lg font-semibold text-gray-800">PostgreSQL (UUID PKs), Django ORM</div>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="text-sm text-gray-600 mb-2">Docs</div>
-              <div className="text-lg font-semibold text-gray-800">Swagger / OpenAPI</div>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="text-sm text-gray-600 mb-2">Hosting</div>
-              <div className="text-lg font-semibold text-gray-800">Vercel/Netlify (FE), Render (BE)</div>
-            </div>
+            {[
+              { title: "Weighted components & sub-components", desc: "Component-based evaluation" },
+              { title: "360° provider → recipient pairing", desc: "Feedback workflow" },
+              { title: "Form builder (MCQ/Text) + option scores", desc: "Custom form creation" },
+              { title: "Assignments with recurrence windows", desc: "Monthly/quarterly scheduling" },
+              { title: "Real-time scoreboard & rankings", desc: "Aggregated scores" },
+              { title: "Admin controls: teams, roles, bulk users", desc: "Organization management" }
+            ].map((feature, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-lg font-semibold text-gray-800 mb-2">{feature.title}</div>
+                <div className="text-sm text-gray-600">{feature.desc}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* SECTION 3 — Key Differentiators */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Key Differentiators</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -147,10 +141,10 @@ const ProgressionProductCaseStudy = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 4 — Architecture Overview */}
-      <section className="py-16 px-6 bg-white">
+      {/* <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Architecture Overview</h2>
           <div className="grid md:grid-cols-2 gap-12">
@@ -204,10 +198,10 @@ const ProgressionProductCaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 5 — Technical Highlights */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Technical Highlights</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -288,7 +282,7 @@ const ProgressionProductCaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 6 — Feature Deep Dive */}
       <section className="py-16 px-6 bg-white">
@@ -357,12 +351,12 @@ const ProgressionProductCaseStudy = () => {
               <p className="text-gray-700">Normalized schema + server-side score computation; tested aggregation pipeline</p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-md">
+            {/* <div className="bg-white rounded-lg p-8 shadow-md">
               <div className="text-red-600 font-semibold mb-2">Challenge</div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Avoiding over-fetching lists and N+1 queries</h3>
               <div className="text-teal-600 font-semibold mb-2 mt-6">Solution</div>
               <p className="text-gray-700">DRF queryset optimization with select_related/prefetch_related</p>
-            </div>
+            </div> */}
 
             <div className="bg-white rounded-lg p-8 shadow-md">
               <div className="text-red-600 font-semibold mb-2">Challenge</div>
@@ -378,7 +372,7 @@ const ProgressionProductCaseStudy = () => {
               <p className="text-gray-700">OTP email flow → DRF Token; strict expiry + rate-limit guards</p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-md md:col-span-2">
+            <div className="bg-white rounded-lg p-8 shadow-md">
               <div className="text-red-600 font-semibold mb-2">Challenge</div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Clear admin visibility of progress</h3>
               <div className="text-teal-600 font-semibold mb-2 mt-6">Solution</div>
@@ -446,10 +440,10 @@ const ProgressionProductCaseStudy = () => {
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Reflection</h2>
           <div className="bg-gray-50 rounded-2xl p-12">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Designing Evolve meant balancing clear UX for non-technical admins with a rigorous scoring model. App Router + Redux slices provided a maintainable FE foundation, while DRF ViewSets and UUID-based models kept the backend clean, secure, and scalable.
+            Designing Evolve meant balancing clear UX for non-technical admins with a rigorous, data-driven scoring model. I initially designed the entire database schema, defining multiple interrelated tables and relationships, which became the foundation for building a scalable backend using Django and DRF. Creating the APIs and working across connected models was my biggest learning curve and significantly strengthened my understanding of backend architecture and data flow.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              The result is a pragmatic platform that organizations can adopt quickly and expand as their evaluation needs grow.
+            On the frontend, I was also responsible for building the UI using AI-assisted tools like Builder.io and Cursor, learning how to effectively guide and refine generated code while integrating it with real APIs and application state. App Router and Redux slices provided a maintainable frontend structure, while DRF ViewSets and UUID-based models kept the backend clean, secure, and scalable.
             </p>
           </div>
         </div>
