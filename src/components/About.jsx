@@ -30,8 +30,8 @@ const aboutPhotos = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="bg-white py-16 md:py-20">
+      <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-10 2xl:px-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6">
