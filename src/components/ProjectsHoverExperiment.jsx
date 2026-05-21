@@ -40,6 +40,13 @@ const ArrowIcon = () => (
   </svg>
 )
 
+
+const BigArrowIcon = ({ className = '' }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 220 120">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={8} d="M146 32l56 28-56 28" />
+  </svg>
+)
+
 const ProjectsHoverExperiment = () => {
   return (
     <section id="projects-hover-experiment" className="bg-[#f7f7f5] py-16 md:py-20">
@@ -93,16 +100,10 @@ const ProjectsHoverExperiment = () => {
                     </div>
                   </div>
 
-                  <div className="pointer-events-none relative z-0 h-36 translate-x-8 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 md:h-44">
-                    <div className={`absolute bottom-0 left-8 h-28 w-56 ${project.accent} md:h-32 md:w-72`} />
-                    <div className="absolute bottom-5 right-0 w-56 rotate-3 overflow-hidden rounded-2xl bg-gray-950 p-4 text-white shadow-2xl transition-transform duration-500 group-hover:rotate-0 group-focus-within:rotate-0 md:w-72">
-                      {project.preview.image ? (
-                        <img
-                          src={project.preview.image}
-                          alt=""
-                          className="h-28 w-full rounded-xl object-cover md:h-36"
-                        />
-                      ) : (
+                  <div className="pointer-events-none relative z-0 h-36 translate-x-8 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 md:h-44 md:translate-x-14">
+                    <div className={`absolute bottom-0 right-[-8.25rem] h-28 w-56 ${project.accent} md:h-32 md:w-72`} />
+                    <div className="absolute bottom-5 right-[-14.25rem] w-56 rotate-3 overflow-hidden rounded-2xl bg-gray-950 p-4 text-white shadow-2xl transition-transform duration-500 group-hover:rotate-0 group-focus-within:rotate-0 md:w-72">
+
                         <div className="flex h-28 flex-col justify-between rounded-xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 p-4 md:h-36">
                           <span className="text-xs uppercase tracking-[0.3em] text-white/50">
                             {project.preview.eyebrow}
@@ -111,20 +112,31 @@ const ProjectsHoverExperiment = () => {
                             {project.preview.headline}
                           </span>
                         </div>
-                      )}
                     </div>
                   </div>
+                  
                 </div>
 
-                <Link
-                  to={project.caseStudyUrl}
-                  className="absolute right-6 top-8 z-20 isolate inline-flex items-center gap-3 rounded-full bg-transparent px-6 py-4 text-xs font-bold uppercase tracking-wide text-gray-950 transition-all duration-500 before:absolute before:left-2 before:top-1/2 before:z-0 before:h-16 before:w-16 before:-translate-y-1/2 before:rounded-full before:bg-gradient-to-br before:from-peach before:via-lavender before:to-teal before:opacity-90 before:transition-all before:duration-500 before:ease-out before:content-[''] hover:shadow-lg hover:before:left-0 hover:before:h-full hover:before:w-full focus-visible:shadow-lg focus-visible:before:left-0 focus-visible:before:h-full focus-visible:before:w-full group-hover:right-8 group-hover:shadow-lg group-hover:before:left-0 group-hover:before:h-full group-hover:before:w-full group-focus:right-8 group-focus-within:right-8 group-focus-within:shadow-lg group-focus-within:before:left-0 group-focus-within:before:h-full group-focus-within:before:w-full md:top-1/2 md:-translate-y-1/2 lg:right-10 lg:group-hover:right-12 lg:group-focus:right-12 lg:group-focus-within:right-12 2xl:right-12 2xl:group-hover:right-14 2xl:group-focus:right-14 2xl:group-focus-within:right-14"
-                >
-                  <span className="relative z-10">View Project</span>
-                  <span className="relative z-10">
-                    <ArrowIcon />
-                  </span>
-                </Link>
+                <div className="absolute right-6 top-8 z-20 flex items-center transition-transform duration-500 group-hover:translate-x-2 group-focus-within:translate-x-2 md:top-1/2 md:-translate-y-1/2 lg:right-10 2xl:right-12">
+                  <Link
+                    to={project.caseStudyUrl}
+                    className="relative isolate inline-flex items-center gap-3 rounded-full bg-transparent px-6 py-4 text-xs font-bold uppercase tracking-wide text-gray-950 transition-all duration-500 before:absolute before:left-2 before:top-1/2 before:z-0 before:h-16 before:w-16 before:-translate-y-1/2 before:rounded-full before:bg-gradient-to-br before:from-peach before:via-lavender before:to-teal before:opacity-90 before:transition-all before:duration-500 before:ease-out before:content-[''] hover:shadow-lg hover:before:left-0 hover:before:h-full hover:before:w-full focus-visible:shadow-lg focus-visible:before:left-0 focus-visible:before:h-full focus-visible:before:w-full group-hover:shadow-lg group-hover:before:left-0 group-hover:before:h-full group-hover:before:w-full group-focus-within:shadow-lg group-focus-within:before:left-0 group-focus-within:before:h-full group-focus-within:before:w-full"
+                  >
+                    <span className="relative z-10">View Project</span>
+                    <span className="relative z-10">
+                      <ArrowIcon />
+                    </span>
+                  </Link>
+                  {/* <Link
+                    to={project.caseStudyUrl}
+                    aria-label={`Open ${project.title} project`}
+                    className="-ml-5 inline-flex text-gray-900 transition-transform duration-500 hover:translate-x-1 focus-visible:translate-x-1"
+                  >
+                    <BigArrowIcon className="h-12 w-24 md:h-16 md:w-36 lg:h-20 lg:w-44" />
+                  </Link> */}
+                </div>
+                
+                
               </div>
             </article>
           ))}

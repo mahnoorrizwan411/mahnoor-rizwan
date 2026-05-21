@@ -3,52 +3,49 @@ import React from 'react'
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Languages",
-      skills: ["JavaScript", "Python", "Dart", "HTML", "CSS"]
+      title: 'Languages',
+      skills: ['JavaScript', 'Python', 'Dart', 'HTML', 'CSS'],
     },
     {
-      title: "Frameworks",
-      skills: ["React", "Django", "Flutter", "Vite", "Tailwind CSS"]
+      title: 'Frameworks',
+      skills: ['React', 'Django', 'Flutter', 'Vite', 'Tailwind CSS'],
     },
     {
-      title: "Concepts",
-      skills: ["REST APIs", "Responsive Design", "State Management", "Animation", "UI/UX Design",]
+      title: 'Concepts',
+      skills: ['REST APIs', 'Responsive Design', 'State Management', 'Animation', 'UI/UX Design'],
     },
     {
-      title: "Tools",
-      skills: ["Figma", "Builder.io", "Cursor", "GitHub", "ChatGPT"]
-    }
+      title: 'Tools',
+      skills: ['Figma', 'Builder.io', 'Cursor', 'GitHub', 'ChatGPT'],
+    },
   ]
 
   return (
-    <section id="skills" className="py-20 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-12 text-center">Skills & Tools</h2>
+    <section id="skills" className="bg-white py-16 md:py-20">
+      <div className="mx-auto mb-10 w-full max-w-[1400px] px-6 lg:px-10 2xl:px-12">
+        <h2 className="text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">Skills & Tools</h2>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">{category.title}</h3>
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-4 py-2 bg-gradient-to-br from-peach to-lavender text-gray-800 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    {skill}
-                  </span>
-                ))}
+      <div className="relative left-1/2 w-screen -translate-x-1/2">
+        {skillCategories.map((category) => (
+          <article key={category.title} className="relative py-7">
+            <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-10 2xl:px-12">
+              <div className="relative pl-10 md:pl-12">
+                <div className="grid gap-3 md:grid-cols-[220px_1fr] md:items-start md:gap-8">
+                  <div className="relative">
+                    <span className="pointer-events-none absolute right-[calc(100%+1.75rem)] top-1/2 h-px w-screen -translate-y-1/2 bg-gray-500 md:right-[calc(100%+3.5rem)]" />
+                    <h3 className="text-lg font-semibold tracking-tight text-gray-800 md:text-xl">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <p className="text-base leading-7 text-gray-600 md:text-lg">
+                    {category.skills.join(', ')}
+                  </p>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Quote */}
-        {/* <div className="max-w-3xl mx-auto text-center">
-          <p className="text-2xl md:text-3xl text-gray-700 italic font-light leading-relaxed">
-            "I believe good engineering is a mix of <span className="font-semibold text-gray-800">clarity</span>, <span className="font-semibold text-gray-800">curiosity</span>, and <span className="font-semibold text-gray-800">care</span>."
-          </p>
-        </div> */}
+          </article>
+        ))}
       </div>
     </section>
   )
