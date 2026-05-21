@@ -75,15 +75,15 @@ const ProjectsHoverExperiment = () => {
                         <span className="relative text-sm font-medium">{project.number}</span>
                       </div>
 
-                      <div className="transition-all duration-500 group-hover:translate-x-5 group-focus-within:translate-x-5 md:group-hover:translate-x-8 md:group-focus-within:translate-x-8">
-                        <h3 className="text-3xl font-bold tracking-tight text-gray-400 transition-colors duration-500 group-hover:text-gray-950 group-focus-within:text-gray-950 md:text-4xl">
+                      <div className="transition-all duration-500 md:group-hover:translate-x-8 md:group-focus-within:translate-x-8">
+                        <h3 className="text-3xl font-bold tracking-tight text-gray-950 transition-colors duration-500 md:text-4xl md:text-gray-400 md:group-hover:text-gray-950 md:group-focus-within:text-gray-950">
                           {project.title}
                         </h3>
                         <p className="mt-3 text-xs font-semibold uppercase tracking-[0.28em] text-gray-400">
                           {project.category}
                         </p>
 
-                        <div className="mt-6 max-w-xl translate-y-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                        <div className="mt-6 max-w-xl translate-y-0 opacity-100 transition-all duration-500 md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-within:translate-y-0 md:group-focus-within:opacity-100">
                           <p className="text-sm leading-6 text-gray-600 md:text-base">{project.description}</p>
                           <div className="mt-4 flex flex-wrap gap-2">
                             {project.tags.map((tag) => (
@@ -100,9 +100,9 @@ const ProjectsHoverExperiment = () => {
                     </div>
                   </div>
 
-                  <div className="pointer-events-none relative z-0 h-36 translate-x-8 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 md:h-44 md:translate-x-14">
-                    <div className={`absolute bottom-0 right-[-8.25rem] h-28 w-56 ${project.accent} md:h-32 md:w-72`} />
-                    <div className="absolute bottom-5 right-[-14.25rem] w-56 rotate-3 overflow-hidden rounded-2xl bg-gray-950 p-4 text-white shadow-2xl transition-transform duration-500 group-hover:rotate-0 group-focus-within:rotate-0 md:w-72">
+                  <div className="pointer-events-none relative z-0 mx-auto mt-6 h-36 w-56 translate-x-0 opacity-100 transition-all duration-500 md:mt-0 md:h-44 md:w-auto md:translate-x-14 md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100 md:group-focus-within:translate-x-0 md:group-focus-within:opacity-100">
+                    <div className={`absolute bottom-0 right-[-18.25rem] h-28 w-56 ${project.accent} md:h-32 md:w-72 max-md:left-1/2 max-md:right-auto max-md:-translate-x-1/2`} />
+                    <div className="absolute bottom-5 right-[-24.25rem] w-56 rotate-3 overflow-hidden rounded-2xl bg-gray-950 p-4 text-white shadow-2xl transition-transform duration-500 md:w-72 md:group-hover:rotate-0 md:group-focus-within:rotate-0 max-md:left-1/2 max-md:right-auto max-md:-translate-x-1/2">
 
                         <div className="flex h-28 flex-col justify-between rounded-xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 p-4 md:h-36">
                           <span className="text-xs uppercase tracking-[0.3em] text-white/50">
@@ -117,7 +117,7 @@ const ProjectsHoverExperiment = () => {
                   
                 </div>
 
-                <div className="absolute right-6 top-8 z-20 flex items-center transition-transform duration-500 group-hover:translate-x-2 group-focus-within:translate-x-2 md:top-1/2 md:-translate-y-1/2 lg:right-10 2xl:right-12">
+                <div className="relative mt-8 flex items-center justify-end md:absolute md:right-6 md:top-1/2 md:z-20 md:mt-0 md:-translate-y-1/2 md:transition-transform md:duration-500 md:group-hover:translate-x-2 md:group-focus-within:translate-x-2 lg:right-10 2xl:right-12">
                   <Link
                     to={project.caseStudyUrl}
                     className="relative isolate inline-flex items-center gap-3 rounded-full bg-transparent px-6 py-4 text-xs font-bold uppercase tracking-wide text-gray-950 transition-all duration-500 before:absolute before:left-2 before:top-1/2 before:z-0 before:h-16 before:w-16 before:-translate-y-1/2 before:rounded-full before:bg-gradient-to-br before:from-peach before:via-lavender before:to-teal before:opacity-90 before:transition-all before:duration-500 before:ease-out before:content-[''] hover:shadow-lg hover:before:left-0 hover:before:h-full hover:before:w-full focus-visible:shadow-lg focus-visible:before:left-0 focus-visible:before:h-full focus-visible:before:w-full group-hover:shadow-lg group-hover:before:left-0 group-hover:before:h-full group-hover:before:w-full group-focus-within:shadow-lg group-focus-within:before:left-0 group-focus-within:before:h-full group-focus-within:before:w-full"
