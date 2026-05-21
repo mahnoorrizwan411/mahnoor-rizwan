@@ -97,8 +97,9 @@ const ProjectsHoverExperiment = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} id="projects-hover-experiment" className="bg-[#f7f7f5] py-16 md:py-20">
-      <div>
+    <section ref={sectionRef} id="projects-hover-experiment" className="relative snap-start py-16 md:py-20">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-peach via-lavender to-teal opacity-20" />
+      <div className="relative z-10">
         <div className="mx-auto mb-12 w-full max-w-[1400px] px-6 lg:px-10 2xl:px-12">
           <p className="mb-3 text-sm font-normal uppercase tracking-[0.15em] text-gray-400">
             Here's a selection of my work
