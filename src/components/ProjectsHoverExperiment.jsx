@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const projects = [
@@ -41,15 +41,63 @@ const ArrowIcon = () => (
 )
 
 
-const BigArrowIcon = ({ className = '' }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 220 120">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={8} d="M146 32l56 28-56 28" />
+const BigArrowIcon = ({ className = '', gradientId = 'project-arrow-gradient' }) => (
+  <svg className={className} fill="none" viewBox="0 0 220 120">
+    <defs>
+      <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#FFE5D9" />
+        <stop offset="50%" stopColor="#E8D5FF" />
+        <stop offset="100%" stopColor="#B8E6D4" />
+      </linearGradient>
+    </defs>
+    <path
+      stroke="rgba(61, 60, 61, 0.2)"
+      strokeLinecap="round"
+      strokeLinejoin="miter"
+      strokeWidth={14}
+      d="M146 32l56 48-56 48"
+    />
+    <path
+      stroke={`url(#${gradientId})`}
+      strokeLinecap="round"
+      strokeLinejoin="miter"
+      strokeWidth={12}
+      d="M146 32l56 48-56 48"
+      className="opacity-0 transition-opacity duration-500 md:group-hover:opacity-100 md:group-focus-within:opacity-100"
+    />
   </svg>
 )
 
 const ProjectsHoverExperiment = () => {
+  const sectionRef = useRef(null)
+  const [isSectionInView, setIsSectionInView] = useState(false)
+
+  useEffect(() => {
+    const sectionEl = sectionRef.current
+    if (!sectionEl) return undefined
+    let revealTimer
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          revealTimer = setTimeout(() => {
+            setIsSectionInView(true)
+          }, 140)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    observer.observe(sectionEl)
+    return () => {
+      observer.disconnect()
+      if (revealTimer) clearTimeout(revealTimer)
+    }
+  }, [])
+
   return (
-    <section id="projects-hover-experiment" className="bg-[#f7f7f5] py-16 md:py-20">
+    <section ref={sectionRef} id="projects-hover-experiment" className="bg-[#f7f7f5] py-16 md:py-20">
       <div>
         <div className="mx-auto mb-12 w-full max-w-[1400px] px-6 lg:px-10 2xl:px-12">
           <p className="mb-3 text-sm font-normal uppercase tracking-[0.15em] text-gray-400">
@@ -61,7 +109,7 @@ const ProjectsHoverExperiment = () => {
         </div>
 
         <div className="relative left-1/2 w-screen -translate-x-1/2 divide-y divide-gray-200 border-y border-gray-200">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article
               key={project.number}
               className="group relative min-h-[170px] overflow-hidden py-8 md:min-h-[190px]"
@@ -117,8 +165,8 @@ const ProjectsHoverExperiment = () => {
                   
                 </div>
 
-                <div className="relative mt-8 flex items-center justify-end md:absolute md:right-6 md:top-1/2 md:z-20 md:mt-0 md:-translate-y-1/2 md:transition-transform md:duration-500 md:group-hover:translate-x-2 md:group-focus-within:translate-x-2 lg:right-10 2xl:right-12">
-                  <Link
+                <div className="relative mt-8 flex items-center justify-end md:absolute md:right-24 md:top-1/2 md:z-20 md:mt-0 md:-translate-y-1/2 md:transition-transform md:duration-500 md:group-hover:translate-x-2 md:group-focus-within:translate-x-2 lg:right-32 2xl:right-36">
+                  {/* <Link
                     to={project.caseStudyUrl}
                     className="relative isolate inline-flex items-center gap-3 rounded-full bg-transparent px-6 py-4 text-xs font-bold uppercase tracking-wide text-gray-950 transition-all duration-500 before:absolute before:left-2 before:top-1/2 before:z-0 before:h-16 before:w-16 before:-translate-y-1/2 before:rounded-full before:bg-gradient-to-br before:from-peach before:via-lavender before:to-teal before:opacity-90 before:transition-all before:duration-500 before:ease-out before:content-[''] hover:shadow-lg hover:before:left-0 hover:before:h-full hover:before:w-full focus-visible:shadow-lg focus-visible:before:left-0 focus-visible:before:h-full focus-visible:before:w-full group-hover:shadow-lg group-hover:before:left-0 group-hover:before:h-full group-hover:before:w-full group-focus-within:shadow-lg group-focus-within:before:left-0 group-focus-within:before:h-full group-focus-within:before:w-full"
                   >
@@ -126,14 +174,18 @@ const ProjectsHoverExperiment = () => {
                     <span className="relative z-10">
                       <ArrowIcon />
                     </span>
-                  </Link>
-                  {/* <Link
+                  </Link> */}
+                  <Link
                     to={project.caseStudyUrl}
                     aria-label={`Open ${project.title} project`}
-                    className="-ml-5 inline-flex text-gray-900 transition-transform duration-500 hover:translate-x-1 focus-visible:translate-x-1"
+                    className={`-ml-5 inline-flex transition-all duration-700 ease-out ${isSectionInView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'} hover:translate-x-1 focus-visible:translate-x-1`}
+                    style={{ transitionDelay: isSectionInView ? `${index * 120}ms` : '0ms' }}
                   >
-                    <BigArrowIcon className="h-12 w-24 md:h-16 md:w-36 lg:h-20 lg:w-44" />
-                  </Link> */}
+                    <BigArrowIcon
+                      gradientId={`project-arrow-gradient-${project.number}`}
+                      className="h-[11.25rem] w-[8.5rem] drop-shadow-[0_0_14px_rgba(232,213,255,0.35)] transition-all duration-500 md:h-[15rem] md:w-[11.5rem] lg:h-[20rem] lg:w-[16rem]"
+                    />
+                  </Link>
                 </div>
                 
                 
