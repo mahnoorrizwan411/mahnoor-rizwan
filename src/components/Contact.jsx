@@ -29,8 +29,15 @@ const EmailIcon = () => (
 
 const Contact = () => {
   return (
-    <footer id="contact" className="py-20 px-6 bg-gradient-to-br from-peach via-lavender to-teal opacity-80">
-      <div className="max-w-4xl mx-auto text-center">
+    <footer id="contact" className="relative overflow-visible px-6 py-20">
+      <div
+        className="pointer-events-none absolute inset-x-0 -top-56 bottom-0 bg-gradient-to-br from-peach via-lavender to-teal opacity-80"
+        style={{
+          maskImage: 'linear-gradient(to top, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 100%)',
+          WebkitMaskImage: 'linear-gradient(to top, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 100%)',
+        }}
+      />
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
           Let's build something meaningful together.
         </h2>
