@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const Skills = () => {
+  const sectionRef = useRef(null)
+  const [isInView, setIsInView] = useState(false)
+
   const skillCategories = [
     {
       title: 'Languages',
-      skills: ['JavaScript', 'Python', 'Dart', 'HTML', 'CSS'],
+      skills: ['Dart', 'JavaScript', 'Python',  'HTML', 'CSS'],
     },
     {
       title: 'Frameworks',
-      skills: ['React', 'Django', 'Flutter', 'Vite', 'Tailwind CSS'],
+      skills: ['Flutter','React', 'Django',  'Vite', 'Tailwind CSS'],
     },
     {
       title: 'Concepts',
@@ -20,15 +23,44 @@ const Skills = () => {
     },
   ]
 
+  useEffect(() => {
+    const sectionEl = sectionRef.current
+    if (!sectionEl) return undefined
+    const scrollRoot = document.getElementById('home-scroll-container')
+    let revealTimer
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          revealTimer = setTimeout(() => {
+            setIsInView(true)
+          }, 120)
+          observer.disconnect()
+        }
+      },
+      { root: scrollRoot, threshold: 0.2 }
+    )
+
+    observer.observe(sectionEl)
+    return () => {
+      observer.disconnect()
+      if (revealTimer) clearTimeout(revealTimer)
+    }
+  }, [])
+
   return (
-    <section id="skills" className="bg-white py-16 md:py-20">
+    <section ref={sectionRef} id="skills" className="bg-white py-16 md:py-20">
       <div className="mx-auto mb-10 w-full max-w-[1400px] px-6 lg:px-10 2xl:px-12">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">Skills & Tools</h2>
       </div>
 
       <div className="relative left-1/2 w-screen -translate-x-1/2">
-        {skillCategories.map((category) => (
-          <article key={category.title} className="relative py-7">
+        {skillCategories.map((category, index) => (
+          <article
+            key={category.title}
+            className={`relative py-7 transition-all duration-[900ms] ease-out ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+            style={{ transitionDelay: isInView ? `${index * 1000}ms` : '0ms' }}
+          >
             <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-10 2xl:px-12">
               <div className="relative pl-10 md:pl-12">
                 <div className="grid gap-3 md:grid-cols-[220px_1fr] md:items-start md:gap-8">

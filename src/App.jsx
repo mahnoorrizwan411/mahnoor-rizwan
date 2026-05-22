@@ -14,7 +14,7 @@ import ProgressionProductCaseStudy from './components/case-studies/ProgressionPr
 
 function Home() {
   return (
-    <div className="h-screen overflow-y-auto snap-y snap-proximity">
+    <div id="home-scroll-container" className="h-screen overflow-y-auto snap-y snap-proximity">
       <Navigation />
       <Hero />
       <About />
