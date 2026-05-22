@@ -41,7 +41,7 @@ const ArrowIcon = () => (
 )
 
 
-const BigArrowIcon = ({ className = '', gradientId = 'project-arrow-gradient' }) => (
+const BigArrowIcon = ({ className = '', gradientId = 'project-arrow-gradient', mobileGradientVisible = false }) => (
   <svg className={className} fill="none" viewBox="0 0 220 120">
     <defs>
       <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
@@ -63,7 +63,11 @@ const BigArrowIcon = ({ className = '', gradientId = 'project-arrow-gradient' })
       strokeLinejoin="miter"
       strokeWidth={12}
       d="M146 32l56 48-56 48"
-      className="opacity-0 transition-opacity duration-500 md:group-hover:opacity-100 md:group-focus-within:opacity-100"
+      className={`transition-opacity duration-500 ${
+        mobileGradientVisible
+          ? 'opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100'
+          : 'opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100'
+      }`}
     />
   </svg>
 )
@@ -176,24 +180,16 @@ const ProjectsHoverExperiment = () => {
                   
                 </div>
 
-                <div className="relative mt-8 flex items-center justify-end md:absolute md:right-24 md:top-1/2 md:z-20 md:mt-0 md:-translate-y-1/2 md:transition-transform md:duration-500 md:group-hover:translate-x-2 md:group-focus-within:translate-x-2 lg:right-32 2xl:right-36">
-                  {/* <Link
-                    to={project.caseStudyUrl}
-                    className="relative isolate inline-flex items-center gap-3 rounded-full bg-transparent px-6 py-4 text-xs font-bold uppercase tracking-wide text-gray-950 transition-all duration-500 before:absolute before:left-2 before:top-1/2 before:z-0 before:h-16 before:w-16 before:-translate-y-1/2 before:rounded-full before:bg-gradient-to-br before:from-peach before:via-lavender before:to-teal before:opacity-90 before:transition-all before:duration-500 before:ease-out before:content-[''] hover:shadow-lg hover:before:left-0 hover:before:h-full hover:before:w-full focus-visible:shadow-lg focus-visible:before:left-0 focus-visible:before:h-full focus-visible:before:w-full group-hover:shadow-lg group-hover:before:left-0 group-hover:before:h-full group-hover:before:w-full group-focus-within:shadow-lg group-focus-within:before:left-0 group-focus-within:before:h-full group-focus-within:before:w-full"
-                  >
-                    <span className="relative z-10">View Project</span>
-                    <span className="relative z-10">
-                      <ArrowIcon />
-                    </span>
-                  </Link> */}
+                <div className="relative z-20 -mt-20 mb-2 flex items-center justify-center md:absolute md:right-24 md:top-1/2 md:z-20 md:mb-0 md:mt-0 md:justify-end md:-translate-y-1/2 md:transition-transform md:duration-500 md:group-hover:translate-x-2 md:group-focus-within:translate-x-2 lg:right-32 2xl:right-36">
                   <Link
                     to={project.caseStudyUrl}
                     aria-label={`Open ${project.title} project`}
-                    className={`-ml-5 inline-flex transition-all duration-700 ease-out ${isSectionInView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'} hover:translate-x-1 focus-visible:translate-x-1`}
+                    className={`inline-flex md:-ml-5 transition-all duration-700 ease-out ${isSectionInView ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'} hover:translate-x-1 focus-visible:translate-x-1`}
                     style={{ transitionDelay: isSectionInView ? `${index * 120}ms` : '0ms' }}
                   >
                     <BigArrowIcon
                       gradientId={`project-arrow-gradient-${project.number}`}
+                      mobileGradientVisible={isSectionInView}
                       className="h-[11.25rem] w-[8.5rem] drop-shadow-[0_0_14px_rgba(232,213,255,0.35)] transition-all duration-500 md:h-[15rem] md:w-[11.5rem] lg:h-[20rem] lg:w-[16rem]"
                     />
                   </Link>
