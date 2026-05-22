@@ -112,7 +112,7 @@ const CatalystCaseStudy = () => {
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Catalyst is a modular React + Vite landing experience that informs and converts two distinct user tracks — Builders & Operators. It uses scroll-based interaction, Lottie-powered animation, and Cloudflare serverless functions to capture leads and automate communications via Systeme.io + Mailgun.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               // { title: "Dual user track funnel", desc: "Builder + Operator" },
               { title: "Modular, scalable structure", desc: "Component architecture" },
@@ -126,16 +126,16 @@ const CatalystCaseStudy = () => {
                 <div className="text-sm text-gray-600">{feature.desc}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
 
 
       {/* TRACK APPLICATION SCREENS */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-0 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Builder & Operator Track Forms</h2>
+          {/* <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Builder & Operator Track Forms</h2> */}
 
           <div className="rounded-3xl border border-slate-200/70 bg-gradient-to-br from-slate-100 to-slate-50 p-6">
 
@@ -176,7 +176,7 @@ const CatalystCaseStudy = () => {
       {/* SECTION 6 — Feature Deep Dive */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Feature Deep Dive</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-12 text-left">Feature Deep Dive</h2>
           <div className="grid gap-12 md:grid-cols-3">
             {[
               {
@@ -263,7 +263,7 @@ const CatalystCaseStudy = () => {
 
 
       {/* SECTION 8 — UX Highlights */}
-      <section className="py-16 px-6 bg-gradient-to-br from-blue to-sky">
+      {/* <section className="py-16 px-6 bg-gradient-to-br from-blue to-sky">
       <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">UX Highlights</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -282,10 +282,10 @@ const CatalystCaseStudy = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 10 — Reflection / Conclusion */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gradient-to-br from-blue to-sky">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Reflection</h2>
           <div className="bg-gray-50 rounded-2xl p-12">

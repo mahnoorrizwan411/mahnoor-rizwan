@@ -189,7 +189,7 @@ const WhileCaseStudy = () => {
       </section>
 
       {/* SECTION 3 — Key Differentiators */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Key Differentiators</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -207,7 +207,7 @@ const WhileCaseStudy = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 4 — Architecture Overview */}
       {/* <section className="py-16 px-6 bg-white">
@@ -272,7 +272,7 @@ const WhileCaseStudy = () => {
       {/* SECTION 5 — Technical Highlights */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Technical Highlights</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-left">Technical Highlights</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-md">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">A) UI & Interaction</h3>
@@ -310,6 +310,10 @@ const WhileCaseStudy = () => {
                 <li className="flex items-start">
                   <span className="text-peach mr-2">•</span>
                   <span>Warm-up + interval layers</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-peach mr-2">•</span>
+                  <span>Backgrounding</span>
                 </li>
               </ul>
             </div>
@@ -355,8 +359,8 @@ const WhileCaseStudy = () => {
 
       {/* SECTION 6 — Feature Deep Dive */}
       <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Feature Deep Dive</h2>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-800 mb-12 text-left">Feature Deep Dive</h2>
           <div className="grid md:grid-cols-[1fr_320px] gap-12 items-stretch">
             <div className="space-y-12">
               <div>
@@ -542,13 +546,13 @@ const WhileCaseStudy = () => {
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Reflection</h2>
           <div className="bg-gray-50 rounded-2xl p-12">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Building While was a balanced exercise in animation-driven product design and robust engineering. Managing complex state, scroll physics, and coordinated animation sequences required a thoughtful foundational architecture.
+              Building While was a balanced exercise in animation-driven product design and robust engineering. Managing complex state, coordinated animation sequences, live activitytracking and audio backgrounding required a thoughtful foundational architecture.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Integrations like Polar and RevenueCat expanded the product's value and reinforced scalability, while Mixpanel enabled insights into retention and session behavior.
+              Integrations like Polar, RevenueCat and Live Activity Tracking expanded the product's value and reinforced scalability, while Mixpanel enabled insights into retention and session behavior.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              The result is a polished meditation experience that feels natural, calm, and deeply personal.
+              The result is a meditation experience that feels natural, calm, and deeply personal. While is a simple app that does one thing and does it well.
             </p>
           </div>
         </div>

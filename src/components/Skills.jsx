@@ -11,15 +11,15 @@ const Skills = () => {
     },
     {
       title: 'Frameworks',
-      skills: ['Flutter','React', 'Django',  'Vite', 'Tailwind CSS'],
+      skills: ['Flutter', 'Django', 'React', 'Tailwind CSS'],
     },
     {
       title: 'Concepts',
-      skills: ['REST APIs', 'Responsive Design', 'State Management', 'Animation', 'UI/UX Design'],
+      skills: [ 'Responsive Design', 'State Management', 'Animation', 'UI/UX Design', 'REST APIs', 'Authentication', 'Swagger', 'DRF', 'Native iOS'],
     },
     {
       title: 'Tools',
-      skills: ['Figma', 'Builder.io', 'Cursor', 'GitHub', 'ChatGPT'],
+      skills: ['Figma', 'Builder.io', 'GitHub', 'Linear', 'Figma', 'Postman', 'Firebase', 'ChatGPT', 'Cursor', 'Claude'],
     },
   ]
 
